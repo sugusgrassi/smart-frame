@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  /* font-family: 'Major Mono Display', monospace; */
+  font-family: 'Share Tech Mono', monospace;
+  background: linear-gradient(to right, rgb(0, 204, 255), rgb(0, 0, 255));
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button{
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+button:hover{
+  color: rgb(0, 204, 255);
+  border: 1px solid  rgb(0, 204, 255);
 }
