@@ -24,7 +24,8 @@ class Signin extends React.Component {
     }
 
     onSubmitSignIn = () => {
-    fetch('http://localhost:3000/signin', {
+    // instead of http://localhost:3000 we change it to the one that Heroku gave   
+    fetch('https://obscure-crag-57150.herokuapp.com/signin', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({

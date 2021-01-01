@@ -111,7 +111,8 @@ loadUser = (data) => {
   onButtonSubmit = () => {
     // To hide the API Clarifai key:
     this.setState({imageURL: this.state.input});
-    fetch('http://localhost:3000/imageurl', {
+    // instead of http://localhost:3000 we change it to the one that Heroku gave
+    fetch('https://obscure-crag-57150.herokuapp.com/imageurl', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -125,7 +126,8 @@ loadUser = (data) => {
     // 1st we calculate the inner function calculateFaceLocation
     // 2nd we calculate the displayFacebox
       if (response){
-        fetch('http://localhost:3000/image', {
+            // instead of http://localhost:3000 we change it to the one that Heroku gave
+        fetch('https://obscure-crag-57150.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
