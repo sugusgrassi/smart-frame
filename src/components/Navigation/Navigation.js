@@ -1,24 +1,27 @@
 import React from 'react';
+import 'tachyons';
 
-const Navigation = ({onRouteChange, isSignedIn}) => {
-
-    if (isSignedIn) {
-        return (
-        <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
-        <p onClick={() => onRouteChange('signout')} className='f3 link dim white underline pa3 pointer'> Sign Out</p>
-        </nav>
-        );
-    } else {
-        return (
-        <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
-            <p onClick={() => onRouteChange('signin')} className='f3 link dim white underline pa3 pointer'> Sign in</p>
-            <p onClick={() => onRouteChange('register')} className='f3 link dim white underline pa3 pointer'> Register</p>
-        </nav>
-        );
-    }
-
+const Navigation = ( {onRouteChange, isSignedin}) => {
+	if( isSignedin === true) {
+		return(
+			<nav>
+				<div onClick={() => onRouteChange('signin')} className="f3 pa3 dim blacklink underline pointer" style={{display:'flex' ,justifyContent:'flex-end'}} > 
+				   {'Signout'}
+				</div>
+			</nav>
+		)
+	}
+	else {
+		return(
+			<nav>
+				<div className="f3 pa3 dim blacklink underline pointer" style={{display:'flex' ,justifyContent:'flex-end'}} > 
+				   <div onClick={() => onRouteChange('signin')} className='ma3'> {'Signin'} </div>
+				   <div onClick={() => onRouteChange('register')} className='ma3'>  {'Register'} </div>
+				</div>
+			</nav>
+		)
+	}
 
 }
-
 
 export default Navigation;
