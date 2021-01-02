@@ -113,7 +113,7 @@ loadUser = (data) => {
     this.setState({imageURL: this.state.input});
     // instead of http://localhost:3000 we change it to the one that Heroku gave
     fetch('https://obscure-crag-57150.herokuapp.com/imageurl', {
-      method: 'post',
+      method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
       input: this.state.input
@@ -128,7 +128,7 @@ loadUser = (data) => {
       if (response){
             // instead of http://localhost:3000 we change it to the one that Heroku gave
         fetch('https://obscure-crag-57150.herokuapp.com/image', {
-          method: 'put',
+          method: 'PUT',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
           id: this.state.user.id
