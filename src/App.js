@@ -56,7 +56,7 @@ class App extends Component {
     })
   }
 
-  
+
   onInputChange = (event) => {
     this.setState({
       input : event.target.value
@@ -86,7 +86,7 @@ class App extends Component {
 
 
   onButtonClick = () => {
-    fetch('https://peaceful-journey-85632.herokuapp.com/imageUrl',{
+    fetch('https://obscure-crag-57150.herokuapp.com/imageUrl',{
         method : 'post',
         headers : { 'Content-Type' : 'application/json'},
         body : JSON.stringify({
@@ -96,7 +96,7 @@ class App extends Component {
     )
     .then( response => response.json())
     .then( (response) =>  {
-      fetch('https://peaceful-journey-85632.herokuapp.com/image',{
+      fetch('https://obscure-crag-57150.herokuapp.com/image',{
         method : 'put',
         headers : { 'Content-Type' : 'application/json'},
         body : JSON.stringify({
