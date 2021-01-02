@@ -1,22 +1,28 @@
 import React from 'react';
-import 'tachyons';
 import './ImageLinkForm.css';
 
-const ImageLinkForm = ({onInputChange, onButtonClick}) => {
-	return(
-		<div >
-			<p className="center tc"> The magic brain will show which celebrity is present in your image. Give it a try. </p>
-			<div className="center" >
-				<div className="pa4 shadow-2 background dib">
-					<div>
-						<input className=" br2" size="25" tpye="text" onChange={onInputChange} placeholder="Paste the URL of the image" /> 
-						<button className=" bg-light-purple br2 " onClick={onButtonClick} >Detect</button> 
-					</div>
-				</div>
-			</div>
-		</div>
-	)
 
+// destructor the { onInputChange } from the props
+const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
+    return (
+        <div className=''>
+            <p className='f3'>
+                {'This Magic frame will detect faces in your pictures. Git it a try'}
+            </p>
+            <div className='center'>
+                <div className='center form pa4 br3 shadow-5'>
+                    <input className='f4 pa2 w-70 center' 
+                    // Onchange is a react event = to oninput
+                    type='text' onChange={onInputChange}/>
+                    <button 
+                    className='w-30 f4 link ph3 pv2 dib white bg-black'
+                    onClick={onButtonSubmit}
+                    >Detect</button>
+                </div>
+            </div>
+        </div>
+    );
 }
+
 
 export default ImageLinkForm;
