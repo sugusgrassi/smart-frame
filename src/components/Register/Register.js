@@ -27,10 +27,10 @@ onPasswordChange = (event) => {
 
 onSubmitSignIn = () => {
         // instead of http://localhost:3000 we change it to the one that Heroku gave
-    fetch('https://obscure-crag-57150.herokuapp.com/register', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
+    fetch('https://infinite-castle-66116.herokuapp.com/register', {
+      method : 'POST',
+      headers : {'Content-Type': 'application/json'},
+      body : JSON.stringify({
         email: this.state.email,
         password: this.state.password,
         name: this.state.name

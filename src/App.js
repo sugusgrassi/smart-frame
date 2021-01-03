@@ -112,7 +112,7 @@ loadUser = (data) => {
     // To hide the API Clarifai key:
     this.setState({imageURL: this.state.input});
     // instead of http://localhost:3000 we change it to the one that Heroku gave
-    fetch('https://obscure-crag-57150.herokuapp.com/imageurl', {
+    fetch('https://infinite-castle-66116.herokuapp.com/imageurl', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -127,7 +127,7 @@ loadUser = (data) => {
     // 2nd we calculate the displayFacebox
       if (response){
             // instead of http://localhost:3000 we change it to the one that Heroku gave
-        fetch('https://obscure-crag-57150.herokuapp.com/image', {
+        fetch('https://infinite-castle-66116.herokuapp.com/image', {
           method: 'PUT',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
